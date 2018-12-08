@@ -31,7 +31,7 @@ app.listen(port, () => {
 require("./Routes/api.js")(app, db);
 require("./Routes/uploader.js")(app, db);
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
   const path = require("path");
   app.get("*", (req, res) => {
