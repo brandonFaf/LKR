@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Uploader</title>
+  </head>
+  <body>
+    <style>
+      .input {
+        padding: 15px;
+      }
+      input,
+      textarea {
+        float: right;
+      }
+      .errorItem {
+        color: red;
+        display: none;
+      }
+      .successItem {
+        display: none;
+        color: green;
+      }
+    </style>
+    <div style="height:500px; width:500px">
+      <form>
+        <div class="input">
+          <label for="title">Titile</label>
+          <input type="text" id="title" name="title" />
+        </div>
+        <div class="input">
+          <label for="audio">Aution</label>
+          <input type="file" id="audio" name="audio" />
+        </div>
+        <div class="input">
+          <label for="duration">Duration</label>
+          <input type="text" id="duration" name="duration" />
+        </div>
+        <div class="input">
+          <label for="Episode">Episdoe</label>
+          <input type="text" id="episode" name="episode" />
+        </div>
+        <div class="input">
+          <label for="summary">Summary</label>
+          <textarea name="summary" id="summary" cols="30" rows="10"></textarea>
+          <button type="submit">Submit</button>
+          <div class="errorItem">Did not submit</div>
+          <div id="errorLog" class="errorItem">Did not submit</div>
+          <div class="successItem">Submitted Successfully</div>
+        </div>
+      </form>
+    </div>
+    <script src="upload.js"></script>
+  </body>
+</html>
