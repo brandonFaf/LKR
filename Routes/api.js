@@ -15,7 +15,7 @@ module.exports = (app, db) => {
         res.json({ episode });
       });
   });
-  app.get("/feed", (req, res) => {
+  app.get("/rss", (req, res) => {
     db.get("episode")
       .find()
       .then(episodes => {
