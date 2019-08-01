@@ -16,11 +16,6 @@ module.exports = (app, db) => {
       });
   });
   app.get("/rss", (req, res) => {
-    db.get("episode")
-      .find()
-      .then(episodes => {
-        res.type("application/xml");
-        res.send(generateXml(episodes));
-      });
+    res.redirect("https://anchor.fm/s/ce3a04c/podcast/rss");
   });
 };
